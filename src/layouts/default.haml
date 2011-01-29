@@ -4,7 +4,9 @@
 		<meta name='charset' content='utf-8'>
 		<meta content='ruby on rails, ruby, rails, website, web applications, webdesign' name='keywords' >
 		<meta content='We are web development company. We work with Ruby on Rails and we love it!' name='description'>
-		%title Sooftly
+		%title 
+			Sooftly
+			= yield_for( :title )
 		%style 
 			@import url('/stylesheets/reset.css');
 			@import url('/stylesheets/screen.css');
