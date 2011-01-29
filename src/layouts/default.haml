@@ -1,16 +1,21 @@
-!!!
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 %html
 	%head
-		%title StaticMatic
-		= stylesheets
+		<meta name='charset' content='utf-8'>
+		<meta content='ruby on rails, ruby, rails, website, web applications, webdesign' name='keywords' >
+		<meta content='We are web development company. We work with Ruby on Rails and we love it!' name='description'>
+		%title Sooftly
+		%style 
+			@import url('/stylesheets/reset.css');
+			@import url('/stylesheets/screen.css');
 		
 	%body
 		
 		.top-wrapper
-			%header.inner.top
+			.inner.top
 				%a{ :href => '/' }
 					= img 'sooftly-logo.png'
-			%nav.inner
+			.inner
 				= menu( ['/index.html', 'home', 'Home', 'Who we are?'], 
 				['/projects.html', 'projects', 'Projects', 'We do web applications, ecommerce, design websites...'],
 				['/contact.html', 'contact', 'Contact', 'Get in touch'])
@@ -19,9 +24,9 @@
 
 		.content-wrapper
 			.inner
-				%section.content
+				.content
 					= yield
 
 		.footer-wrapper
-			%footer.inner
+			.footer.inner
 				Copyright &copy; 2011 Sooftly
