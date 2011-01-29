@@ -1,0 +1,27 @@
+!!!
+%html
+	%head
+		%title StaticMatic
+		= stylesheets
+		
+	%body
+		
+		.top-wrapper
+			%header.inner.top
+				%a{ :href => '/' }
+					= img 'sooftly-logo.png'
+			%nav.inner
+				= menu( ['/index.html', 'home', 'Home', 'Who we are?'], 
+				['/projects.html', 'projects', 'Projects', 'We do web applications, ecommerce, design websites...'],
+				['/contact.html', 'contact', 'Contact', 'Get in touch'])
+		
+		.spacer.inner	
+
+		.content-wrapper
+			.inner
+				%section.content
+					= yield
+
+		.footer-wrapper
+			%footer.inner
+				Copyright &copy; 2011 Sooftly
