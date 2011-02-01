@@ -6,17 +6,19 @@
 .right-column
 	.section.project
 		%p 
-			%span.project-title Holiday planner
+			%span.project-title 
+				%a{ :href => 'http://holidayplannerapp.com' } Holiday planner
 			%span
 				%a.box{ :href => 'http://holidayplannerapp.com', :target => 'blank' } view site
 				%a.box{ :href => 'https://github.com/pasierb/holiday-planner', :target => 'blank' } source code
-		.project-image
-			= img( 'projects/holidayplanner.png' )
+		.project-image{ :alt => 'http://holidayplannerapp.com' }
+			%a{ :href => 'http://holidayplannerapp.com' }
+				= img( 'projects/holidayplanner.png' )
 		%p
 			Open source web tool allowing easy... holiday planning.  
 			%ul
 				%li Facebook integration
-				%li Available in Poland, Italy, Great Bretain
+				%li Available in Poland, Italy, England, Wales, Northen Ireland
 
 .spacer.inner
 
@@ -26,11 +28,13 @@
 .right-column
 	.section.project
 		%p
-			%span.project-title Sooftly.com 
+			%span.project-title 
+				%a{ :href => 'http://sooftly.com' } Sooftly 
 			%span
 				%a.box{ :href => 'https://github.com/pasierb/sooftly' } source code
-		.project-image
-			= img( 'projects/sooftly.png' )
+		.project-image{ :alt => 'http://sooftly.com' }
+			%a{ :href => 'http://sooftly.com' }
+				= img( 'projects/sooftly.png' )
 		%p
 			This very page. 
 

@@ -10,7 +10,7 @@ module MainMenuHelper
 			li_class = link[1]
 			li_class << ' current' if selected
 
-			items_output << tag( :li, :class => link[1] ) { 
+			items_output << tag( :li, :class => link[1], :onclick => "window.location = '#{link[0]}'" ) { 
 				tag( :div, :class => 'menu-item-wrapper' ) {
 					tag( :a, :href => link[0] ) {
 						link[2] + tag( :div, :class => 'tease' ) {
