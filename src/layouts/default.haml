@@ -8,9 +8,20 @@
 			Sooftly
 			= yield_for( :title )
 		%style 
-			@import url('/stylesheets/reset.css');
-			@import url('/stylesheets/screen.css');
+			@import url('stylesheets/reset.css');
+			@import url('stylesheets/screen.css');
 		
+		%script{ :type => "text/javascript" }
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-20273312-2']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
 	%body
 		
 		.top-wrapper
@@ -18,9 +29,9 @@
 				%a{ :href => '/' }
 					= img 'sooftly-logo.png'
 			.inner
-				= menu( ['/index.html', 'home', 'Home', 'Who we are?'], 
-				['/projects.html', 'projects', 'Projects', 'We do web applications, ecommerce, design websites...'],
-				['/contact.html', 'contact', 'Contact', 'Get in touch'])
+				= menu( ['index.html', 'home', 'Home', 'Who we are?'], 
+				['projects.html', 'projects', 'Projects', 'We do web applications, ecommerce, design websites...'],
+				['contact.html', 'contact', 'Contact', 'Get in touch'])
 		
 		.spacer.inner	
 
