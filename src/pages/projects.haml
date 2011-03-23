@@ -1,17 +1,18 @@
 - content_hash[:title] = '- Projects'
 
 .left-column
-	%h1 web apps
+	%div.projects-list-menu
+		%h1 web apps
 
-	%ul.projects-list
-		%li
-			%a{ :href => "#recentphotos" } RecentPhotos
-		%li
-			%a{ :href => "#easpolska" } EAS Polska sp. z o.o.
-		%li
-			%a{ :href => "#holidayplanner" } HolidayPlanner
-		%li
-			%a{ :href => "#countdowns" } Countdowns
+		%ul.projects-list
+			%li
+				%a{ :href => "#recentphotos" } RecentPhotos
+			%li
+				%a{ :href => "#easpolska" } EAS Polska sp. z o.o.
+			%li
+				%a{ :href => "#holidayplanner" } HolidayPlanner
+			%li
+				%a{ :href => "#countdowns" } Countdowns
 
 .right-column
 	.section.project
@@ -75,3 +76,27 @@
 			Used technologies: Ruby on Rails 3.0, Javascript/Ajax (jQuery), PostgreSQL
 
 .spacer.inner
+
+
+:javascript
+	$(function() {
+		$('ul.projects-list li a').bind('click',function(event){
+			var $anchor = $(this);
+			$('html, body').stop().animate({ scrollTop: $("a[name*='"+$anchor.attr('href').substr(1)+"']").offset().top }, 500);
+			event.preventDefault();
+		});
+	});
+
+	var name = "div.projects-list-menu";
+	var menuYloc = null;
+
+	$(window).load(function(){
+		menuYloc = parseInt($(name).css("top").substring(0,$(name).css("top").indexOf("px")));
+		menuYOffsetTop = $(name).offset().top;
+		$(window).scroll(function () { 
+			scroll = $(document).scrollTop();
+			offset = scroll-menuYOffsetTop+20+"px";
+			if( scroll > menuYOffsetTop-menuYloc ){ $(name).animate({top:offset},{duration: 100, queue:false}); } 
+			else { $(name).css('top', menuYloc); }
+		});
+	}); 

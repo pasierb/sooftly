@@ -34,6 +34,12 @@ p {
 }
 
 /* line 28 */
+.logo-main {
+  width: 425px;
+  height: 172px;
+}
+
+/* line 32 */
 .footer {
   margin-top: 10px;
   text-align: center;
@@ -41,7 +47,7 @@ p {
   font-size: 10px;
 }
 
-/* line 36 */
+/* line 40 */
 .content-wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -51,24 +57,24 @@ p {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* line 48 */
+/* line 52 */
 .content {
   margin: 10px 0 10px 0;
   font-size: 15px;
 }
 
-/* line 53 */
+/* line 57 */
 .content h1 {
   font-weight: normal;
-  font-size: 40px;
+  font-size: 30px;
 }
 
-/* line 58 */
+/* line 62 */
 .content .header {
   margin: 10px 0 30px 0;
 }
 
-/* line 61 */
+/* line 65 */
 .inner {
   width: 980px;
   margin-left: auto;
@@ -76,13 +82,14 @@ p {
   clear: both;
 }
 
-/* line 68 */
+/* line 72 */
 .left-column {
   float: left;
   width: 200px;
+  position: relative;
 }
 
-/* line 72 */
+/* line 77 */
 .right-column {
   width: 780px;
   margin-left: 200px;
@@ -91,19 +98,19 @@ p {
   font-size: 16px;
 }
 
-/* line 81 */
+/* line 86 */
 .right-column .section {
   border-left: 1px solid #dadada;
   margin-bottom: 30px;
 }
 
-/* line 87 */
+/* line 92 */
 .top {
   text-align: right;
   margin-top: 10px;
 }
 
-/* line 92 */
+/* line 97 */
 .main-menu {
   margin: 0px;
   padding: 0px;
@@ -115,19 +122,19 @@ p {
   background-position: 0 0;
 }
 
-/* line 103 */
+/* line 108 */
 .main-menu li {
   float: left;
   width: 240px;
   padding: 0 10px 0 10px;
 }
 
-/* line 108 */
+/* line 113 */
 .main-menu li div.menu-item-wrapper {
   padding-top: 50px;
 }
 
-/* line 112 */
+/* line 117 */
 .main-menu li:hover, .main-menu li.current {
   background-image: url("../images/main-menu-bg-hover.png");
   background-repeat: repeat-x;
@@ -135,84 +142,84 @@ p {
   cursor: pointer;
 }
 
-/* line 119 */
+/* line 124 */
 .main-menu li:hover .tease, .main-menu li.current .tease {
   color: #5c5c5c;
 }
 
-/* line 122 */
+/* line 127 */
 .main-menu li a {
   text-decoration: none;
   display: block;
   font-family: Sans, Verdana;
-  font-size: 35px;
+  font-size: 27px;
   color: black;
 }
 
-/* line 130 */
+/* line 135 */
 .main-menu li a .tease {
-  font-size: 15px;
+  font-size: 14px;
   color: #dcdcdc;
   margin-top: 10px;
 }
 
-/* line 137 */
+/* line 142 */
 .main-menu li div.menu-item-wrapper {
   background-repeat: no-repeat;
   background-position: 60px 8px;
 }
 
-/* line 142 */
+/* line 147 */
 .main-menu li.projects div.menu-item-wrapper {
   background-image: url("../images/projects-icon-40-35-opacit.png");
 }
 
-/* line 145 */
+/* line 150 */
 .main-menu li.projects:hover div.menu-item-wrapper, .main-menu li.projects.current div.menu-item-wrapper {
   background-image: url("../images/projects-icon-40-35-black.png");
 }
 
-/* line 148 */
+/* line 153 */
 .main-menu li.home div.menu-item-wrapper {
   background-image: url("../images/home-icon-40-35-opacit.png");
 }
 
-/* line 151 */
+/* line 156 */
 .main-menu li.home:hover div.menu-item-wrapper, .main-menu li.home.current div.menu-item-wrapper {
   background-image: url("../images/home-icon-40-35-black.png");
 }
 
-/* line 154 */
+/* line 159 */
 .main-menu li.contact div.menu-item-wrapper {
   background-image: url("../images/contact-icon-40-35-opacit.png");
 }
 
-/* line 157 */
+/* line 162 */
 .main-menu li.contact:hover div.menu-item-wrapper, .main-menu li.contact.current div.menu-item-wrapper {
   background-image: url("../images/contact-icon-40-35-black.png");
 }
 
-/* line 160 */
+/* line 165 */
 .project-image {
   margin-left: 7px;
   border-top: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
 }
 
-/* line 166 */
+/* line 171 */
 .project-title {
   font-size: 23px;
   color: #6f6f6f;
 }
 
-/* line 171 */
+/* line 176 */
 .project, .project p {
   text-indent: 0px;
   padding: 0 10px;
   font-size: 12px;
 }
 
-/* line 178 */
+/* line 183 */
 a.box {
   margin-left: 30px;
   background-color: #b7b7b7;
@@ -224,12 +231,12 @@ a.box {
   font-size: 12px;
 }
 
-/* line 189 */
+/* line 194 */
 a.box:hover {
   background-color: #a7a7a7;
 }
 
-/* line 192 */
+/* line 197 */
 .right-column .section {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -241,13 +248,13 @@ a.box:hover {
   border-bottom-right-radius: 15px;
 }
 
-/* line 204 */
+/* line 209 */
 .content ul {
   list-style: circle;
   margin-left: 50px;
 }
 
-/* line 208 */
+/* line 213 */
 a.sooftly-link {
   display: block;
   width: 197px;
@@ -257,18 +264,24 @@ a.sooftly-link {
   text-indent: -9999em;
 }
 
-/* line 216 */
+/* line 221 */
 .language-selection {
   float: right;
 }
 
-/* line 219 */
+/* line 224 */
+div.projects-list-menu {
+  position: absolute;
+  top: 10px;
+}
+
+/* line 228 */
 ul.projects-list {
   padding: 0;
   margin: 30px 0 0 25px;
 }
 
-/* line 223 */
+/* line 232 */
 ul.projects-list li {
   font-size: 16px;
   margin: 8px 0 0 0;
