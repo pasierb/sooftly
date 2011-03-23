@@ -3,11 +3,49 @@
 .left-column
 	%h1 web apps
 
+	%ul.projects-list
+		%li
+			%a{ :href => "#recentphotos" } RecentPhotos
+		%li
+			%a{ :href => "#easpolska" } EAS Polska sp. z o.o.
+		%li
+			%a{ :href => "#holidayplanner" } HolidayPlanner
+		%li
+			%a{ :href => "#countdowns" } Countdowns
+
 .right-column
 	.section.project
 		%p 
 			%span.project-title 
-				%a{ :href => 'http://holidayplannerapp.com', :target => 'blank' } Holiday planner
+				%a{ :name => "recentphotos", :href => 'http://recentphotosapp.com', :target => 'blank' } RecentPhotos
+			%span
+				%a.box{ :href => 'http://recentphotosapp.com', :target => 'blank' } view site
+		.project-image{ :alt => 'http://recentphotosapp.com' }
+			%a{ :href => 'http://recentphotosapp.com', :target => 'blank' }
+				= img( 'projects/recentphotos.png' )
+		%p
+			RecentPhotos is a fabulous iOS app that keeps your phone book up to date with the latest photos of your contacts and lets you easily share your own pics.
+		%p 
+			What we did? Server side and web frontend scripting.
+		%p 
+			Used technologies: Ruby on Rails 2.3, Javascript/Ajax (jQuery), PostgreSQL
+
+	.section.project
+		%p 
+			%span.project-title 
+				%a{ :name => "easpolska" } EAS Polska sp. z o.o.
+			%span
+		.project-image{ :alt => 'EAS Polska sp. z o.o.' }
+			= img( 'projects/easpolska.png' )
+		%p
+			Flexible CMS system for our Polish client form security sector.
+		%p
+			Used technologies: Ruby on Rails 3.0, Javascript/Ajax (jQuery), PostgreSQL
+	
+	.section.project
+		%p 
+			%span.project-title 
+				%a{ :name => "holidayplanner", :href => 'http://holidayplannerapp.com', :target => 'blank' } Holiday planner
 			%span
 				%a.box{ :href => 'http://holidayplannerapp.com', :target => 'blank' } view site
 				%a.box{ :href => 'https://github.com/pasierb/holiday-planner', :target => 'blank' } source code
@@ -19,35 +57,21 @@
 			%ul
 				%li Facebook integration
 				%li Available in Poland, Italy, England, Wales, Northen Ireland
+		%p 
+			Used technologies: Ruby on Rails 3.0, Javascript/Ajax (jQuery), PostgreSQL
 	
 	.section.project
 		%p 
 			%span.project-title 
-				%a{ :href => 'http://countdowns.sooftly.com', :target => 'blank' } Countdowns
+				%a{ :name => "countdowns", :href => 'http://countdowns.sooftly.com', :target => 'blank' } Countdowns
 			%span
 				%a.box{ :href => 'http://countdowns.sooftly.com', :target => 'blank' } view site
 		.project-image{ :alt => 'http://countdowns.sooftly.com' }
 			%a{ :href => 'http://countdowns.sooftly.com', :target => 'blank' }
 				= img( 'projects/countdowns.png' )
 		%p
-			Another 'just for fun' app. Create Your own countowns, share it via facebook, paste it on forums, do whatever You like whith it.  
-
-.spacer.inner
-
-.left-column
-	%h1 static pages
-
-.right-column
-	.section.project
+			Another 'just for fun' app. Create Your own countowns, share it via facebook, paste it on forums, do whatever You like with it.  
 		%p
-			%span.project-title 
-				%a{ :href => 'http://sooftly.com' } Sooftly 
-			%span
-				%a.box{ :href => 'https://github.com/pasierb/sooftly', :target => 'blank' } source code
-		.project-image{ :alt => 'http://sooftly.com' }
-			%a{ :href => 'http://sooftly.com' }
-				= img( 'projects/sooftly.png' )
-		%p
-			This very page. 
+			Used technologies: Ruby on Rails 3.0, Javascript/Ajax (jQuery), PostgreSQL
 
 .spacer.inner
