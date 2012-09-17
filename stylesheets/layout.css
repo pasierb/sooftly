@@ -1,0 +1,189 @@
+html, body {
+	font-family: Verdana;
+	font-size: 14px;
+	height: 100%; }
+/* clearfix */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	clear: both;
+	display: block;}
+html[xmlns] .clearfix {display: block;}
+* html .clearfix {height: 1%;}
+.s-wrapper { 
+	position: relative;
+	margin: 0 auto;
+	width: 950px;}
+.s-main {
+	overflow:auto;
+	padding-bottom: 150px;}
+.s-logo {
+	clear: both;
+	background: transparent url(../images/sooftly-logo.png) no-repeat top left;
+	text-indent: 2000em;
+	overflow: hidden;
+	display: block;
+	width: 242px;
+	height: 81px;}
+.s-nav {
+	width: 260px;
+	margin: 0 0 0 0;
+	position: fixed;
+	top: 100px;}
+.s-nav-label-wrapper {
+	padding: 5px 0;}
+.s-nav-label {
+	clear: both;
+	display: inline-block;
+	color: #aaa;
+	text-decoration: none;
+	margin: 0 0 0 150px;
+	font-size: 19px;
+	width: auto;}
+.s-nav-label:hover {
+	color: #333;}
+.s-page {
+	background: transparent url(../images/splatter-1.png) no-repeat -180px 180px;
+	padding: 100px 0 0 0;
+	overflow: hidden;
+	margin: 0 0 100px 0;}
+.s-page-intro{
+	font-size: 60px;
+	margin-bottom: 30px;
+	color: #86943b;}
+.s-page-intro-wrapper{
+	margin: 0 0 0 250px;}
+.s-page-content {
+	line-height: 1.5;
+	padding: 15px 0px;}
+.s-page-content-left {
+	width: 260px;
+	padding: 30px 0 0 0;
+	float: left;
+	font-size: 17px;
+	color: #555;}
+.s-page-content-right {
+	margin: 0 0 0 280px;
+	border-left: 1px solid #eee;}
+.projects .s-page-content-right {
+	background: transparent url(../images/projects-icon-40-35-black.png) no-repeat 95% 0; }
+.about .s-page-content-right {
+	background: transparent url(../images/home-icon-40-35-black.png) no-repeat 95% 0; }
+.contact .s-page-content-right {
+	background: transparent url(../images/contact-icon-40-35-black.png) no-repeat 95% 0; }
+.s-page-content-right > div {
+	padding: 35px 10px;}
+.s-page-content .s-page-content-section {
+	padding: 10px 0;
+	border-top: 3px solid #333;}
+.contact .s-page-content-section {
+	padding-top: 30px;}
+.s-project {
+	display: block;
+	text-decoration: none;
+	width: 645px;
+	height: 175px;
+	padding: 5px 0;
+	margin: 5px 0 20px 0;
+	border-left: 2px solid #333;
+	position: relative;
+	overflow: hidden;}
+.s-project-overlay {
+	width: 645px;
+	height: 175px;
+	display: none;
+	position: absolute;
+	top: 5px;
+	background: transparent url(../images/opacity-50-b.png) repeat top left;}
+.s-project-info {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	color: #fff;
+	background: transparent url(../images/opacity-50-b.png) repeat top left;}
+.s-project-hover .s-project-info {
+	/*background: #000 url(../images/opacity-50-b.png) repeat top left;*/
+	border-top: 1px solid #222;
+	color: #eee;}
+.s-project-heading {
+	padding: 10px;}
+.s-project-heading h2{
+	font-size: 13px;
+	font-weight: bold;}
+.s-project-description {
+	font-size: 12px;
+	padding: 0 10px 10px 10px;
+	display: none;}
+.s-wrapper-footer {
+	padding: 50px 0 80px 0;
+	background-color: #333;
+	color: #aaa;}
+.s-wrapper-footer a {
+	color: #aaa;}
+.s-wrapper-footer a:hover {
+	color: #fff;
+	text-decoration: none;}
+.s-main-footer {
+	font-size: 12px;
+	line-height: 1.4em;} 
+.s-main-footer > ul > li {
+	float: left; 
+	margin: 0 50px 0 0;}
+.s-main-footer h3{
+	color: #555;
+	font-weight: bold;
+	margin: 20px 5px;}
+.s-footer-contact img {
+	float: left;
+	margin: 0 15px 0 0;}
+.s-footer-contact div {
+	float: left; }
+.s-center {
+	width: 100%;
+	text-align: center;}
+.s-top-link {
+	display: block;
+	background: transparent url(../images/back_to_top.png) no-repeat top left;
+	width: 47px;
+	height: 45px;
+	margin: 50px auto 185px auto;}
+.s-footer-overlay {
+	position: fixed;
+	background: transparent url(../images/opacity-50-b.png) repeat top left;
+	width: 100%;
+	color: #aaa;
+	font-size: 11px;
+	text-align: center;
+	padding: 8px;
+	bottom: 0px;}
+.s-footer-overlay .s-footer-link {
+	background: transparent url(../images/downarrow.png) no-repeat left center;
+	padding: 0 0 0 13px;
+	color: #aaa;
+	display: block;
+	float: left;}
+.s-wrapper-topmenu {
+	/*background: transparent url(../images/opacity-50.png) repeat 0 0;*/
+	background-color: #f5f5fb;
+	position: fixed;
+	width: 100%;
+	top: 0; }
+.s-wrapper-topmenu ul {
+	float: right;}
+.s-wrapper-topmenu ul li {
+	float: left;
+	padding: 10px;}
+.s-wrapper-topmenu ul li a {
+	font-size: 12px;
+	background: transparent url(../images/downarrow.png) no-repeat left center;
+	padding: 0 0 0 13px;
+	color: #555;}
+.s-wrapper-topmenu ul li a:hover {
+	text-decoration: none;
+	color: #666;}

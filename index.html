@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<title>Sooftly.com - we do web</title>
+		<link rel="stylesheet" href="stylesheets/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="stylesheets/layout.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.s-page-intro-wrapper .s-nav-label').click(function(){
+					hide_nav();
+					show_nav( this );
+					show_page( this );
+					return false;
+				}).hover(function(){ hover_nav($(this)) },function(){ blur_nav($(this)) });
+				$('.s-nav-topmenu, .s-footer-link, .s-nav-link').click(function(){
+					show_page( this );
+					return false;
+				});
+				$('.s-project').hover(function(){
+					$('.s-project-description, .s-project-overlay', $(this)).slideDown(200);
+					$(this).addClass('s-project-hover');
+				},function(){
+					$('.s-project-description, .s-project-overlay', $(this)).slideUp(150);
+					$(this).removeClass('s-project-hover');
+				});
+			});
+			function hover_nav( link ){
+				li = $(link).parent('li');
+				if( !li.hasClass('s-nav-hover') ) $(link).stop().animate({paddingLeft: '10px'},100);
+			}
+			function blur_nav( link ){
+				li = $(link).parent('li');
+				if( !li.hasClass('s-nav-hover') ) $(link).stop().animate({paddingLeft: '0px'},100);
+			}
+			function show_nav( link ){
+				$(link).animate({paddingLeft: '50px'},300, function(){ $(link).parent('li').addClass('s-nav-hover'); });
+			}
+			function hide_nav( link ){
+				$('.s-nav li.s-nav-hover a').animate({
+					paddingLeft: '0px'
+				},100);
+				li = $('.s-nav ul li');
+				li.removeClass('s-nav-hover');
+			}
+			function show_page( link ){
+				anchor = $('a[name="'+$(link).attr('href').substring(1)+'"]')
+				$('html, body').stop().animate({scrollTop: anchor.offset().top-100}, 400);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="s-wrapper">
+		<div class="s-main">
+		<div class="s-nav">
+			<a href="#projects" class="s-nav-link s-logo">Sooftly</a>
+		</div>
+		<div class="s-pages-wrapper">
+			<div class="s-page">
+				<div class="s-page-intro-wrapper">
+					<a name="projects" href="#projects" class="s-nav-link s-page-intro"><h1>, we do web.</h1></a>
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#about">are..</a></div>
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#contact">get in touch.</a></div>
+				</div>
+				<div class="s-page-content projects">
+					<div class="s-page-content-left">
+						<p>We work with ruby on rails and we love it!</p>
+						<p>Here is some of our work.</p>
+					</div>
+					<div class="s-page-content-right">
+						<div>
+							<div class="s-page-content-section">
+								<a class="s-project" href="http://www.sharewise.com" target="_blank">
+									<img src="images/sharewise.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>Sharewise.de</h2>
+										</div>
+										<div class="s-project-description">
+											<p>sharewise is a stock market community for people looking for meaningful and well-founded information about stocks. Since 03.2011 we are proudly taking part of developing this great app.</p>
+										</div>
+									</div>
+								</a>
+								<a class="s-project" href="http://hopee.fr" target="_blank">
+									<img src="images/hopee.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>Hopee.fr</h2>
+										</div>
+										<div class="s-project-description">
+											<p>French equivalent of sharewise.</p>
+										</div>
+									</div>
+								</a>
+								<a class="s-project" href="http://www.grabiezca.pl" target="_blank">
+									<img src="images/grabiezca.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>Grabieżca</h2>
+										</div>
+										<div class="s-project-description">
+											<p>Based on spree e-commerce.</p>
+										</div>
+									</div>
+								</a>
+								<a class="s-project" href="http://www.recentphotosapp.com" target="_blank">
+									<img src="images/recentphotos.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>Recent Photos</h2>
+										</div>
+										<div class="s-project-description">
+											<p>Share the best moments with your best friends! Take a photo, apply a great vintage filter, and instantly - instantly! - share it with your friends using push and badges.</p>
+										</div>
+									</div>
+								</a>
+								<a class="s-project" href="http://www.niepirace.pl" target="_blank">
+									<img src="images/niepirace.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>Nie piracę, gram na oryginałach</h2>
+										</div>
+										<div class="s-project-description">
+											<p>Polish nonprofit action promoting the buying original games. As we consider ourselves as a gamers we strongly support such initiatives.</p>
+										</div>
+									</div>
+								</a>
+								<a class="s-project" href="http://holidayplannerapp.com" target="_blank">
+									<img src="images/holidayplanner.png" />
+									<div class="s-project-overlay"></div>
+									<div class="s-project-info">
+										<div class="s-project-heading">
+											<h2>HolidayPlanner</h2>
+										</div>
+										<div class="s-project-description">
+											<p>HolidayPlanner is a simple tool that allows, in a simple and transparent way, to schedule leave to maximize lenght of Your holidays.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="s-page">
+				<div class="s-page-intro-wrapper">
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#projects">do web.</a></div>
+					<a name="about" href="#about" class="s-nav-link s-page-intro"><h1>, we are...</h1></a>
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#contact">get in touch.</a></div>
+				</div>
+				<div class="s-page-content about">
+					<div class="s-page-content-left">
+						<p>We enjoy our work!</p>
+					</div>
+					<div class="s-page-content-right">
+						<div>
+							<div class="s-page-content-section">
+								<p>We do what we love to do and our work is our passion! Be aware that if You choose to go with us we will breathe, eat and sleep Your project... or if we find Your idea silly we will let You know ;).</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="s-page">
+				<div class="s-page-intro-wrapper">
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#projects">do web.</a></div>
+					<div class="s-nav-label-wrapper"><a class="s-nav-label" href="#about">are...</a></div>
+					<a name="contact" href="#contact" class="s-nav-link s-page-intro">, we get in touch.</a>
+				</div>
+				<div class="s-page-content contact">
+					<div class="s-page-content-left">
+						<p>If You have any questions...</p>
+					</div>
+					<div class="s-page-content-right">
+						<div>
+							<div class="s-page-content-section">
+								<p>feel free to email us at <a href="mailto:michal.pasierbski@sooftly.com">michal.pasierbski@sooftly.com</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	</div>
+	<div class="s-wrapper-footer">
+		<a name="footer"></a>
+		<div class="s-wrapper s-main-footer">
+			<ul>
+				<li class="s-footer-contact">
+					<h3>Contact information</h3>
+					<img src="images/me_work_80_80.png" alt="at work"/>
+					<div>
+						<p>
+							Sooftly<br />
+							ul. Nyska 44/19<br />
+							50-505 Wrocław, Polska<br />
+							NIP: 611-227-38-58<br />
+							Email: <a href="mailto:michal.pasierbski@sooftly.com">michal.pasierbski@sooftly.com</a><br />
+							Skype: mpasierbski<br />
+						</p>
+					</div>
+				</li>
+				<li>
+					<h3>Are You lost?</h3>
+					<p>
+						<ul>
+							<li><a href="#projects" class="s-nav-link">projects</a></li>
+							<li><a href="#about" class="s-nav-link">about us</a></li>
+							<li><a href="#contact" class="s-nav-link">contact</a></li>
+						</ul>
+					</p>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+			<div class="s-center">
+				<a href="#projects" class="s-nav-link s-top-link"></a>
+			</div
+		</div>
+	</div>
+	<div class="s-wrapper-topmenu">
+		<div class="s-wrapper s-main-topmenu">
+			<ul>
+				<li><a href="#projects" class="s-nav-link s-nav-topmenu">projects</a></li>
+				<li><a href="#about" class="s-nav-link s-nav-topmenu">about us</a></li>
+				<li><a href="#contact" class="s-nav-link s-nav-topmenu">contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="s-footer-overlay">
+		Sooftly &copy; 2011
+		<a class="s-footer-link" href="#footer">footer?</a>
+	</div>
+	</body>
+</html>
