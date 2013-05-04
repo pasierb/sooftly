@@ -1,0 +1,11 @@
+<div id="projects-list-container" class="big">
+  <ul class="projects-list">
+    <li data-ng-repeat="project in projects" class="project-{{project.code}}">
+      <a href="#" data-ng-click="showProject(project, $event)">
+        {{ project.name }}
+        <div class="project-image {{ project.code }}" style="background-image: url({{ project.image }})"></div>
+        <p class="small-hide">{{ project.description }}</p>
+      </a>
+    </li>
+  </ul>
+</div>

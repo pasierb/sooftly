@@ -1,0 +1,128 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Sooftly */
+body {
+  background: url('/images/binding_light.png') 0 0 repeat;
+  font-size: 14px;
+  font-style: italic;
+  font-family: "Times New Roman";
+  font-size: 18px;
+  color: #444;
+}
+p {
+}
+.top { width: 100%; background-color: #313131; }
+.top-container { width: 950px; margin: 0 auto; }
+.top-menu { float: right; }
+.top-menu ul li {
+  float: left;
+  padding: 10px;
+}
+.top-menu ul li a {
+  font-size: 12px;
+  background: transparent url('/images/downarrow.png') no-repeat left center;
+  padding: 0 0 0 13px;
+  color: #eee;
+  text-decoration: none;
+  font-family: Verdana;
+  font-style: normal;
+}
+.top-menu ul li a:hover { text-decoration: underline; color: #fff; }
+a.home-link {
+  display: inline-block;
+  background: url("/images/sooftly-top.png") 0 0 no-repeat;
+  width: 125px;
+  height: 42px;
+  text-indent: -2000em;
+  overflow: hidden;
+  margin: 5px 0;
+}
+.wdw-banner {
+  display: block;
+  background: url('/images/sooftly-wdw.png') 0 0 no-repeat;
+  width: 530px;
+  height: 70px;
+  margin: 100px auto 0 auto;
+}
+.disclaimer {
+  text-align: center;
+  margin-top: 20px;
+}
+.container { width: 950px; margin: 50px auto 0 auto; position: relative; }
+.container .left-column { width: 250px; float: left; }
+.container .left-column.big { width: 100%; float: none; }
+.container .right-column { margin-left: 260px; }
+ul.projects-list li {
+  float: left;
+  clear: right;
+  width: 100%;
+}
+ul.projects-list li.selected {
+  position: absolute;
+}
+.big ul.projects-list li { 
+  width: 30%;
+}
+ul.projects-list li a .project-image {
+  display: block;
+  width: 230px;
+  height: 100px;
+  -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+ul.projects-list .small-hide { display: none; }
+ul.projects-list .selected .small-hide { display: initial; }
+ul.projects-list li a .project-image.holiday { background-position: -0px 50px; }
+.big ul.projects-list li a .project-image {
+  width: 90%;
+}
