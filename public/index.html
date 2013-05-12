@@ -1,26 +1,58 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sooftly - we do web</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
 </head>
 <body data-ng-app="sooftly">
-
-  <div class="container" data-ng-view=""></div>
-  <div class="top">
-    <div class="top-container">
-      <a href="/#/" class="home-link">Sooftly</a>
-      <div class="top-menu">
-        <ul>
-          <li><a href="/#/">Home</a></li>
-          <li><a href="/#/projects">Projects</a></li>
-          <li><a href="/#/about">About</a></li>
-        </ul>
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="/#/" class="brand home-link">Sooftly</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+            <li><a href="/#/"><i class="icon-home"></i>Home</a></li>
+            <li><a href="/#/projects"><i class="icon-list-alt"></i>Projects</a></li>
+            <li><a href="/#/about"><i class="icon-info-sign"></i>About</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
+  <div class="container" data-ng-view=""></div>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="inline">
+        <li>
+          <h5 id="contact" name="contact">Contact information</h5>
+          <address>
+            <strong>Michał Pasierbski SOOFTLY</strong><br>
+            ul. Nyska 44 lok. 19<br>
+            50-505 Wrocław, Polska<br>
+            <abbr title="NIP">NIP:</abbr> 898-202-89-25<br>
+            <a href="mailto:michal.pasierbski@sooftly.com">michal.pasierbski@sooftly.com</a><br>
+            <abbr title="Skype">S:</abbr> mpasierbski
+          </address>
+        </li>
+        <li>
+          <h5>Are you lost?</h5>
+          <ul>
+            <li><a href="/#/">Home</a></li>
+            <li><a href="/#/projects">Projects</a></li>
+            <li><a href="/#/about">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <p>Sooftly &copy; 2011-2013</p>
+    </div>
+  </footer>
   <script src="/js/jquery-2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/angular.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/app.js" type="text/javascript" charset="utf-8"></script>

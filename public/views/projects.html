@@ -1,39 +1,31 @@
-<section id="projects-list-container" class="left-column big">
-  <div class="search-container">
-    <form>
-      <span>
-        <input type="text" class="search rounded" name="search" placeholder="Search..." data-ng-model="search.name">
-        <span class="clear-input" data-ng-click="search.name = ''">&#215;</span>
-      </span>
-    </form>
-  </div>
-  <ul class="projects-list">
-    <li data-ng-repeat="project in projects | filter:search" class="project-{{project.code}}">
-      <a href="#" data-ng-click="showProject(project, $event)">
-        <div class="project-image {{ project.code }}" style="background-image: url({{ project.image }})"></div>
-      </a>
-    </li>
-  </ul>
-</section>
+<div class="row">
+  <section id="projects-list-container" class="span4">
+    <div class="search-container">
+      <form>
+        <span>
+          <input type="text" class="search rounded" name="search" placeholder="Search..." data-ng-model="search.name">
+          <span class="clear-input" data-ng-click="search.name = ''" data-ng-show="search.name">&#215;</span>
+        </span>
+      </form>
+    </div>
+    <ul class="projects-list">
+      <li data-ng-repeat="project in projects | filter:search" class="project-{{project.code}}">
+        <a href="#" data-ng-click="showProject(project, $event)">
+          <div class="project-image {{ project.code }}" style="background-image: url({{ project.image }})"></div>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-<section class="right-column project" data-ng-show="project">
-  <a href="#" class="close" data-ng-click="hideProject(project, $event, true)">&#215;</a>
-  <h1>{{ project.name }}</h1>
-  <span class="url">(<a href="{{ project.url }}" target="_blank">{{ project.url }}</a>)</span>
-  <div>
-    <img src="{{ project.image }}" alt="{{ project.name }}" class="project" />
-  </div>
-  <table border="0">
-    <tr>
-      <td class="fixed-m">what's this?</td>
-      <td>
-        <p>{{ project.description }}</p>
-      </td>
-    </tr>
-    <tr>
-      <td>what we did?</td>
-    </tr>
-  </table>
-</section>
-<script type="text/javascript" charset="utf-8">
-</script>
+  <section class="span8 project" data-ng-show="project">
+    <a href="#" class="close" data-ng-click="hideProject(project, $event, true)">&#215;</a>
+    <h1>{{ project.name }}</h1>
+    <span class="url">(<a href="{{ project.url }}" target="_blank">{{ project.url }}</a>)</span>
+    <div>
+      <img src="{{ project.image }}" alt="{{ project.name }}" class="project" />
+    </div>
+    <blockquote>
+      <p>{{ project.description }}</p>
+    </blockquote>
+  </section>
+</div>
