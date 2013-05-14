@@ -7,6 +7,9 @@
     }).when("/projects", {
       templateUrl: "/views/projects.html",
       controller: "ProjectsController"
+    }).when("/lab", {
+      templateUrl: "/views/lab.html",
+      controller: "LabController"
     }).when("/about", {
       templateUrl: "/views/about.html",
       controller: "ApplicationController"
@@ -64,6 +67,9 @@
   });
 
   Sooftly.controller('ApplicationController', function ($scope) {
+  });
+
+  Sooftly.controller('LabController', function ($scope) {
   });
 
   Sooftly.controller('ProjectsController', function ($scope, ProjectsFactory) {
