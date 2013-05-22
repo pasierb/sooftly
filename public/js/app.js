@@ -12,10 +12,25 @@
       controller: "LabController"
     }).when("/about", {
       templateUrl: "/views/about.html",
-      controller: "ApplicationController"
     });
   });
 
+  Sooftly.factory("LabProjectsFactory", function () {
+    var projects = [{
+      code: 'topthat',
+      name: 'jquery-topthat',
+      repoUrl: 'https://github.com/pasierb/jquery-topthat',
+      readmeUrl: '/views/lab/topthat_readme.html'
+    },{
+      code: 'countdown5',
+      name: 'Countdown5',
+      repoUrl: 'https://github.com/pasierb/countdown5',
+      readmeUrl: '/views/lab/countdow5_readme.html'
+    }];
+    return {
+      getProjects: function () { return projects }
+    };
+  });
   Sooftly.factory("ProjectsFactory", function () {
     var projects = [{
       code: 'sw',
@@ -69,7 +84,19 @@
   Sooftly.controller('ApplicationController', function ($scope) {
   });
 
-  Sooftly.controller('LabController', function ($scope) {
+  Sooftly.controller('LabController', function ($scope, LabProjectsFactory , $http) {
+    $scope.project = null;
+    $scope.projects = LabProjectsFactory.getProjects();
+
+    $scope.showProject = function (project, $event) {
+      $scope.project = project;
+      $http.get(project.readmeUrl).success(function (data) {
+        $(".readme").html(data);
+      });
+      if ($event) $event.preventDefault();
+    }
+
+    $scope.showProject($scope.projects[0]);
   });
 
   Sooftly.controller('ProjectsController', function ($scope, ProjectsFactory) {
@@ -102,5 +129,13 @@
 
     // init
     $scope.showProject($scope.projects[0]);
+  });
+
+  $("ul.nav a").click(function () {
+    var $this = $(this)
+      , ul = $this.parents('ul.nav');
+
+    $("li", ul).removeClass('active');
+    $this.parent('li').addClass('active');
   });
 })();

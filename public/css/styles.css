@@ -110,8 +110,6 @@ ul.projects-list li a .project-image.holiday { background-position: -0px 50px; }
 h1 {
   font-size: 27px;
   display: inline-block;
-  font-style: italic;
-  font-family: 'Times New Roman';
   margin: 10px;
   color: #000;
 }
@@ -121,6 +119,10 @@ input[type=text]{
   background-color: white;
 }
 .clear-input { margin-left: -20px; font-weight: bold; cursor: pointer; }
+.readme.github {
+  background-color: #fff;
+  padding: 20px 40px;
+}
 blockquote {
   background:#f9f9f9;
   border-left:10px solid #ccc;

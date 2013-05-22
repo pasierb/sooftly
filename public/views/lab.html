@@ -1,8 +1,18 @@
 <div class="row">
   <section class="span3">
     <ul class="nav nav-tabs nav-stacked">
-      <li><a href="#">Countdown5</a></li>
-      <li><a href="#">jquery.topthat</a></li>
+      <li data-ng-repeat="project in projects" class="project-{{project.code}}">
+        <a href="#" data-ng-click='showProject(project, $event)'>
+          <i class="icon-chevron-right"></i>
+          {{ project.name }}
+        </a>
+      </li>
     </ul>
+  </section>
+  <section class="span9" data-ng-show="project">
+    <p>
+      Github repo: <a href="{{project.repoUrl}}" target="_blank">{{ project.repoUrl }}</a>
+    </p>
+    <div class="readme github"></div>
   </section>
 </div>

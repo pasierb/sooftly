@@ -6,6 +6,7 @@
   <title>sooftly - we do web</title>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,14 +18,14 @@
 
   </script>
 </head>
-<body data-ng-app="sooftly">
+<body data-ng-app="sooftly" data-ng-controller="ApplicationController">
   <div class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
         <a href="/#/" class="brand home-link">Sooftly</a>
         <div class="nav-collapse collapse">
           <ul class="nav pull-right">
-            <li><a href="/#/"><i class="icon-home"></i>Home</a></li>
+            <li><a href="/#/" data-ng-click="navlinkToggle()"><i class="icon-home"></i>Home</a></li>
             <li><a href="/#/projects"><i class="icon-list-alt"></i>Projects</a></li>
             <li><a href="/#/lab"><i class="icon-filter"></i>Lab</a></li>
             <li><a href="/#/about"><i class="icon-info-sign"></i>About</a></li>
@@ -67,6 +68,7 @@
   </footer>
   <script src="/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/showdown.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

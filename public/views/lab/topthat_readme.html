@@ -1,0 +1,44 @@
+<article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="jquery-topthat" class="anchor" href="#jquery-topthat"><span class="octicon octicon-link"></span></a>jquery-topthat</h1>
+
+<p>sticky top on scroll</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><code>$("selector").topthat()</code></p>
+
+<p>you can provide options:</p>
+
+<pre><code>$("selector").topthat({
+    stickCssClass: "sticky",  // css class that will be applied o element when sticked
+      prependTo: "body"         // set to null if you don't want to detach element
+}) 
+</code></pre>
+
+<h2>
+<a name="development-notes" class="anchor" href="#development-notes"><span class="octicon octicon-link"></span></a>Development notes</h2>
+
+<p>lib is writtern in CoffeeScript (lib/js/jquery.topthat.coffee), to compile it and copy to respective build and test folders just run:
+<code>make js</code></p>
+
+<p>You will need to have coffescript installed
+(on Ubuntu/Debian)
+<code>apt-get install coffeescript</code></p>
+
+<p>and UglifyJS 2 (node package)
+<code>npm install uglify-js -g</code></p>
+
+<h2>
+<a name="testing" class="anchor" href="#testing"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>To install jasmine framework just run <code>bundle install</code></p>
+
+<p>To run tests <code>rake jasmine</code> and got to <code>http://localhost:8888/</code> </p>
+
+<h2>
+<a name="who-is-using-it" class="anchor" href="#who-is-using-it"><span class="octicon octicon-link"></span></a>Who is using it?</h2>
+
+<ul>
+<li><a href="http://www.en.sharewise.com/">www.sharewise.com</a></li>
+</ul></article>
